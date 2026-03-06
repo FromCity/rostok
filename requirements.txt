@@ -1,0 +1,7 @@
+fastapi
+langchain
+langgraph
+pydantic
+uvicorn
+langchain_huggingface
+jinja2
