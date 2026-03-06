@@ -27,7 +27,7 @@ def get_answer(prompt):
 
     ai_msg = model_with_tools.invoke(messages)
 
-    return ai_msg.tool_calls
+    return ai_msg.tool_calls[0]['args']
 
 
 if __name__ == "__main__":
