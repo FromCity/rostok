@@ -83,10 +83,10 @@ def get_synonims_antonyms(word):
     else:
         prompt = db.query(Prompt).order_by(Prompt.id.desc()).first()
         res = get_answer(prompt)
-        for synonim in mes.synonyms:
+        for synonim in res.synonyms:
             synonim_db = Synonim(synonim=synonim)
             word_db.synonims.extend([synonim_db])
-        for antonim in mes.antonym:
+        for antonim in res.antonym:
             antonym_db = Antonym(antonim=antonim)
             word_db.antonyms.extend([antonym_db])
         db.add(word_db)
